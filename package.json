@@ -1,0 +1,24 @@
+{
+  "name": "animoe",
+  "version": "1.0.0",
+  "description": "Animoe is a anime themed telegram bot use to get information about animes and movies.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "npx nodemon index.js",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "dotenv": "^10.0.0",
+    "millisec": "^0.2.0",
+    "mongoose": "^6.1.3",
+    "node-fetch": "^3.1.0",
+    "telegraf": "^4.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
