@@ -88,6 +88,7 @@ This bot is fully written in *JavaScript* by ๖ۣۜƊaℝ𝓀 Sτaℝ⇜, feel 
 *▸ Movies & TV:* [TheMoviesDb](themoviedb.org)
 *▸ Anime data:* [Anilist](Anilist.co)
 *▸ Anime quotes:* [Animechan](animechan.vercel.app)
+*▸ Wallpaper:* [Wallheaven](wallheaven.cc)
       
 If you wanna know more about me then ask developer,
 Thank You ;)
