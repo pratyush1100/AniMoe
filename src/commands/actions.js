@@ -64,6 +64,7 @@ Here are all movie related commands:
 Here are all other commands:
 
 \`/quote \`: returns an anime quote.
+\`/wall <anime name> \`: returns an anime wallpaper.
 \`/stats \`: gives the stats of bot.
 `,
       {
