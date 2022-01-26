@@ -31,4 +31,4 @@ To run this project, you will need to add the following environment variables to
 
 - [@pratyush1100](https://www.github.com/pratyush1100)
 
-[](http://ForTheBadge.com/images/badges/made-with-javascript.svg)
+![ForTheBadge made-with-python](http://ForTheBadge.com/images/badges/made-with-javascript.svg)
