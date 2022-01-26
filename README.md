@@ -30,3 +30,5 @@ To run this project, you will need to add the following environment variables to
 ## Authors
 
 - [@pratyush1100](https://www.github.com/pratyush1100)
+
+[](http://ForTheBadge.com/images/badges/made-with-javascript.svg)
