@@ -29,7 +29,7 @@ export default function animeCommand(bot) {
             id
             site
           }
-        type
+        format
         genres
         status
         title {
@@ -56,9 +56,11 @@ export default function animeCommand(bot) {
           });
         } else {
           const {
+            title,
+            coverImage,
             idMal,
             startDate,
-            type,
+            format,
             genres,
             status,
             episodes,
@@ -66,6 +68,8 @@ export default function animeCommand(bot) {
             siteUrl,
             description,
             duration,
+            studios,
+            trailer,
           } = res;
           let studioArr = [];
           res.studios.nodes.map((studio) => studioArr.push(studio.name));
@@ -106,19 +110,24 @@ export default function animeCommand(bot) {
           ctx.replyWithPhoto(
             { url: res.coverImage.extraLarge, filename: "anime.jpg" },
             {
-              caption: `
-*${res.title.romaji}*(${res.title.native})
-
-*➝ Type:* ${type}
-*➝ Status:* ${status}
-*➝ Genres:* \`${genres.join(", ")}\`
-*➝ Episodes:* ${episodes}
-*➝ Duration:* ${duration} Per Ep
-*➝ Released:* ${startDate.year} 
-*➝ Score:* ${averageScore}
-*➝ Studios:* ${studioArr.join(", ")}
-
-*➝* ${shortOverview.replace(/<br>/g, " ")}
+              caption: 
+              `**${title.romaji}**(${title.native})\n` +
+              `**➝ Type:** ${format}\n` +
+              `**➝ Status:** ${status}\n` +
+              `**➝ Genres:** \`${genres.join(", ")}\`\n` +
+              `**➝ Episodes:** ${episodes}\n` +
+              `**➝ Duration:** ${
+                format == "MOVIE"
+                  ? duration + " Minutes"
+                  : duration + " Mins/Per ep"
+              }\n` +
+              `**➝ Released:** ${startDate.year}\n` +
+              `**➝ Score:** ${averageScore}\n` +
+              `**➝ Studios:** \`${studioArr.join(", ")}\`\n\n` +
+              `**➝** ${shortOverview
+                .replace(/<br>/g, "")
+                .replace(/<i>/g, "")
+                .replace(/<\/i>/g, "")}
 `,
               parse_mode: "Markdown",
               reply_to_message_id: ctx.update.message.message_id,
